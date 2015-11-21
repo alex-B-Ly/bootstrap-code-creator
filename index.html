@@ -12,6 +12,8 @@
 <body>
 
 
+<!-- ADVANCED BOOTSTRAP CREATOR -->
+
   <div class="navbar navbar-inverse navbar-fixed-bottom">
     
     <div class="container-fluid">
@@ -20,17 +22,42 @@
           <a id="menu-slider" href="#">Add Elements</a>
         </div>
       </div>
-      <div class="row menu">
-        <p class="test">test</p>
-        <p class="test">test</p>
-        <p class="test">test</p>
-        <p class="test">test</p>
-        <p class="test">test</p>
-        <p class="test">test</p>
-        <p class="test">test</p>
-        <p class="test">test</p>
-        <p class="test">test</p>
-        <p class="test">test</p>
+      <div class="container-fluid menu">
+
+        <div class="row menu-title">
+          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">
+            <h3>Row Edit</h3>
+            <!-- TODO add button to create row and maybe a menu to modify an existing one -->
+          </div>
+        </div>
+
+        <div id="row-creator-menu"></div>        
+
+        <div class="row menu-title">
+          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">
+            <h3>Responsive menu: Input number of columns for each device size.</h3>
+          </div>
+        </div>
+
+        <div id="responsive-menu" class="row">
+          <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 text-center">
+            <p>XS</p>
+            <input id="resp-input-xs" type="text" />
+          </div>
+          <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 text-center">
+            <p>SM</p>
+            <input id="resp-input-sm" type="text" />
+          </div>
+          <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 text-center">
+            <p>MD</p>
+            <input id="resp-input-md" type="text" />
+          </div>
+          <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 text-center">
+            <p>LG</p>
+            <input id="resp-input-lg" type="text" />
+          </div>
+        </div>
+
       </div>
     </div>
 

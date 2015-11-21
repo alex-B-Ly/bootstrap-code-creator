@@ -4,6 +4,14 @@
   text-decoration: none;
 }
 
-.test{
+.menu{
   color: white;
+}
+
+#resp-input-xs,
+#resp-input-sm,
+#resp-input-md,
+#resp-input-lg{
+  width: 60%;
+  color: black;
 }
