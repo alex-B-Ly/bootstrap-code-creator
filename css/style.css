@@ -5,7 +5,12 @@
 }
 
 .menu{
+  margin-top: 40px;
   color: white;
+}
+
+.menu-title{
+  margin-top: 10px;
 }
 
 #resp-input-xs,
