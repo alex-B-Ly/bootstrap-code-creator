@@ -13,10 +13,26 @@
   margin-top: 10px;
 }
 
+/*Element Selector*/
+
+#create-row-button{
+  margin-top: 4px;
+}
+
+/*Responsive Menu*/
+
 #resp-input-xs,
 #resp-input-sm,
 #resp-input-md,
 #resp-input-lg{
   width: 60%;
   color: black;
+}
+
+
+
+#hi{
+  height: 50px;
+  width: 50px;
+  background: red;
 }

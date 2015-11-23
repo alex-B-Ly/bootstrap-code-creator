@@ -10,9 +10,13 @@ $(document).ready(function() {
 
 });
 
+// Element Selector
 
+var mainSelected;
 
+function selector(e){
+  mainSelected = e.target.id;
+  $('#mod-selection').text(mainSelected);
+}
 
-
-
-
+document.addEventListener('click', selector);
