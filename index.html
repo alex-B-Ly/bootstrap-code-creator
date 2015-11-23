@@ -11,7 +11,14 @@
 </head>
 <body>
 
-<div id="hi"></div>
+  <div id="code-area" class="container">
+    <div class="row text-center">
+      <h1>Your code</h1>
+    </div>
+    <div class="row">
+      <pre id="code"></pre>
+    </div>
+  </div>
 
 <!-- ADVANCED BOOTSTRAP CREATOR -->
 
@@ -29,11 +36,14 @@
         <div id="row-creator-menu" class="row">
           <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-              <input type="text" placeholder="assign ID" />
-              <input type="text" placeholder="assign class" />
+              <input id="id-assign" type="text" placeholder="assign ID" />
+              <input id="class-assign" type="text" placeholder="assign class" />
             </div>
-            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
               <button id="create-row-button" class="btn-block btn-lg btn-default">CREATE ROW</button>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+              <button id="create-div-button" class="btn-block btn-lg btn-default">CREATE DIV</button>
             </div>
           </div>
           <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
@@ -54,6 +64,10 @@
         </div>
 
         <div id="responsive-menu" class="row">
+          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">
+            <p>ALL</p>
+            <input id="resp-input-all" type="text" />
+          </div>
           <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 text-center">
             <p>XS</p>
             <input id="resp-input-xs" type="text" />

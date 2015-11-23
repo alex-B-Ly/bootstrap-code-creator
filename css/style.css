@@ -13,9 +13,15 @@
   margin-top: 10px;
 }
 
+#id-assign,
+#class-assign{
+  color: black;
+}
+
 /*Element Selector*/
 
-#create-row-button{
+#create-row-button,
+#create-div-button{
   margin-top: 4px;
 }
 
@@ -27,9 +33,14 @@
 #resp-input-lg{
   width: 60%;
   color: black;
+  text-align: center;
 }
 
-
+#resp-input-all{
+  color: black;
+  margin-bottom: 5px;
+  text-align: center;
+}
 
 #hi{
   height: 50px;
