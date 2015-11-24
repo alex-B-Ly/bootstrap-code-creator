@@ -31,7 +31,7 @@ $(document).ready(function() {
     var codeField = document.getElementById('code');
 
     colsButton.on('click', function(){
-      codeField.textContent += '<div class="col">\n\n'
+      codeField.textContent += '<div class="col">'
     });
   }
 
