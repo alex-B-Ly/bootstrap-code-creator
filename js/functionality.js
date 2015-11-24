@@ -62,16 +62,32 @@ $(document).ready(function() {
         codeField.textContent += 'col-xs-'+allInp.value+' col-sm-'+allInp.value+' col-md-'+allInp.value+' col-lg-'+allInp.value;
       }
       if(xsInp.value){
-        codeField.textContent += 'col-xs-'+xsInp.value;
+        if(xsInp.value.toLowerCase() ==='h'){
+          codeField.textContent += 'hidden-xs';  
+        }else{
+          codeField.textContent += 'col-xs-'+xsInp.value;
+        }
       }
       if(smInp.value){
-        codeField.textContent += ' col-sm-'+smInp.value;
+        if(smInp.value.toLowerCase() ==='h'){
+          codeField.textContent += ' hidden-sm';  
+        }else{
+          codeField.textContent += ' col-sm-'+smInp.value;
+        }
       }
       if(mdInp.value){
-        codeField.textContent += ' col-md-'+mdInp.value;
+        if(mdInp.value.toLowerCase() === 'h'){
+          codeField.textContent += ' hidden-md';  
+        }else{
+          codeField.textContent += ' col-md-'+mdInp.value;
+        }
       }
       if(lgInp.value){
-        codeField.textContent += ' col-lg-'+lgInp.value;
+        if(lgInp.value.toLowerCase() === 'h'){
+          codeField.textContent += ' hidden-lg';  
+        }else{
+          codeField.textContent += ' col-lg-'+lgInp.value;
+        }
       }
       // TODO Add additional classes here, including ALL and class input
       if(classAssign.value){
