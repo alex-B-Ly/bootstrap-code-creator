@@ -54,9 +54,13 @@ $(document).ready(function() {
     var mdInp = document.getElementById('resp-input-md');
     var lgInp = document.getElementById('resp-input-lg');
     var allInp = document.getElementById('resp-input-all');
+    var classAssign = document.getElementById('class-assign');
 
     colsButton.on('click', function(){
       codeField.textContent += '<div class="';
+      if(allInp.value){
+        codeField.textContent += 'col-xs-'+allInp.value+' col-sm-'+allInp.value+' col-md-'+allInp.value+' col-lg-'+allInp.value;
+      }
       if(xsInp.value){
         codeField.textContent += 'col-xs-'+xsInp.value;
       }
@@ -70,6 +74,9 @@ $(document).ready(function() {
         codeField.textContent += ' col-lg-'+lgInp.value;
       }
       // TODO Add additional classes here, including ALL and class input
+      if(classAssign.value){
+        codeField.textContent += ' ' + classAssign.value;
+      }
       codeField.textContent += '">';
     });
   }
@@ -81,6 +88,37 @@ $(document).ready(function() {
     closeButton.on('click', function(){
       codeField.textContent += '</div>\n\n';
     });
+  }
+
+  // COLUMN INPUT FIXER
+
+  function colFix(){
+    var xsInp = document.getElementById('resp-input-xs');
+    var smInp = document.getElementById('resp-input-sm');
+    var mdInp = document.getElementById('resp-input-md');
+    var lgInp = document.getElementById('resp-input-lg');
+    var allInp = document.getElementById('resp-input-all');
+    var individualInps =[xsInp, smInp, mdInp, lgInp];
+
+    function allInputPoof(){
+      if(xsInp.value || smInp.value || mdInp.value || lgInp.value){
+        allInp.value = '';
+      }
+    }
+
+    function individualPoof(){
+      if(allInp.value){
+        for(var i=0; i<individualInps.length; i++){
+          individualInps[i].value = '';
+        }
+      }
+    }
+
+    allInp.addEventListener('keyup', individualPoof);
+
+    for(var j=0; j<individualInps.length; j++){
+      individualInps[j].addEventListener('keyup', allInputPoof);
+    }
   }
 
   // CLEAR CODE
@@ -100,4 +138,5 @@ $(document).ready(function() {
   colsCreate();
   divCloseCreate();
   clearCode();
+  colFix();
 });
