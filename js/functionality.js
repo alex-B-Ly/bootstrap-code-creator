@@ -30,8 +30,16 @@ $(document).ready(function() {
         }else{
           codeField.textContent += '<div class="row-fluid">\n\n';
         }
-      }else{
-        codeField.textContent += '<div class="row">\n\n';
+      }else if(rowFluidCheck.checked === false){
+        if(idAssign.value && classAssign.value){
+          codeField.textContent += '<div id="'+ idAssign.value +'" class="row '+ classAssign.value + '">\n\n'; 
+        }else if(idAssign.value){
+          codeField.textContent += '<div id="'+ idAssign.value +'" class="row">\n\n';  
+        }else if(classAssign.value){
+          codeField.textContent += '<div class="row '+ classAssign.value +'">\n\n';
+        }else{
+          codeField.textContent += '<div class="row">\n\n';
+        }
       }
     });
   }
