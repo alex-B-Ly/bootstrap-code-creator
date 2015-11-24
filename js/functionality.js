@@ -11,7 +11,7 @@ $(document).ready(function() {
     });
   }
 
-  // Pre test
+  // ROW AND COLS DIV CREATION
   function rowCreate(){
     var rowButton = $('#create-row-button');
     var rowFluidCheck = document.getElementById('row-fluid-check');
@@ -19,24 +19,34 @@ $(document).ready(function() {
 
     rowButton.on('click', function() {
       if(rowFluidCheck.checked){
-        codeField.textContent += '<div class="row-fluid"></div>\n';
+        codeField.textContent += '<div class="row-fluid">\n\n';
       }else{
-        codeField.textContent += '<div class="row"></div>\n';
+        codeField.textContent += '<div class="row">\n\n';
       }
     });
   }
 
-  function divCreate(){
-    var divButton = $('#create-div-button');
+  function colsCreate(){
+    var colsButton = $('#create-cols-button');
     var codeField = document.getElementById('code');
 
-    divButton.on('click', function(){
-      codeField.textContent += '<div class="col"></div>\n\n'
+    colsButton.on('click', function(){
+      codeField.textContent += '<div class="col">\n\n'
+    });
+  }
+
+  function divCloseCreate(){
+    var closeButton = $('#close-div-button');
+    var codeField = document.getElementById('code');
+
+    closeButton.on('click', function(){
+      codeField.textContent += '</div>\n\n'
     });
   }
 
   // FUNCTIONS CALLED
   menuSlide();
   rowCreate();
-  divCreate();
+  colsCreate();
+  divCloseCreate();
 });

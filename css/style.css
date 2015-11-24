@@ -21,7 +21,8 @@
 /*Element Selector*/
 
 #create-row-button,
-#create-div-button{
+#create-cols-button,
+#close-div-button{
   margin-top: 4px;
 }
 
