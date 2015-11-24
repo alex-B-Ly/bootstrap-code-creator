@@ -1,7 +1,7 @@
 $(document).ready(function() {
   
 
-  // slide menu
+  // SLIDE MENU
   function menuSlide(){  
     $('.menu').hide();
 
@@ -41,6 +41,8 @@ $(document).ready(function() {
           codeField.textContent += '<div class="row">\n\n';
         }
       }
+
+      idAssign.value = '';
     });
   }
 
@@ -49,7 +51,7 @@ $(document).ready(function() {
     var codeField = document.getElementById('code');
 
     colsButton.on('click', function(){
-      codeField.textContent += '<div class="col">'
+      codeField.textContent += '<div class="col">';
     });
   }
 
@@ -58,7 +60,18 @@ $(document).ready(function() {
     var codeField = document.getElementById('code');
 
     closeButton.on('click', function(){
-      codeField.textContent += '</div>\n\n'
+      codeField.textContent += '</div>\n\n';
+    });
+  }
+
+  // CLEAR CODE
+  function clearCode(){
+    var code = $('#code');
+    var clearButton = $('#clear-code');
+
+    clearButton.on('click', function(e) {
+      e.preventDefault();
+      code.text('');
     });
   }
 
@@ -67,4 +80,5 @@ $(document).ready(function() {
   rowCreate();
   colsCreate();
   divCloseCreate();
+  clearCode();
 });
