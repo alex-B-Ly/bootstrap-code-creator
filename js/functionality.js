@@ -49,9 +49,28 @@ $(document).ready(function() {
   function colsCreate(){
     var colsButton = $('#create-cols-button');
     var codeField = document.getElementById('code');
+    var xsInp = document.getElementById('resp-input-xs');
+    var smInp = document.getElementById('resp-input-sm');
+    var mdInp = document.getElementById('resp-input-md');
+    var lgInp = document.getElementById('resp-input-lg');
+    var allInp = document.getElementById('resp-input-all');
 
     colsButton.on('click', function(){
-      codeField.textContent += '<div class="col">';
+      codeField.textContent += '<div class="';
+      if(xsInp.value){
+        codeField.textContent += 'col-xs-'+xsInp.value;
+      }
+      if(smInp.value){
+        codeField.textContent += ' col-sm-'+smInp.value;
+      }
+      if(mdInp.value){
+        codeField.textContent += ' col-md-'+mdInp.value;
+      }
+      if(lgInp.value){
+        codeField.textContent += ' col-lg-'+lgInp.value;
+      }
+      // TODO Add additional classes here, including ALL and class input
+      codeField.textContent += '">';
     });
   }
 
