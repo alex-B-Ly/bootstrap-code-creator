@@ -121,6 +121,25 @@ $(document).ready(function() {
     }
   }
 
+  // CLEAR COLUMNS
+  function colClear(){
+    var clearCols = document.getElementById('clear-cols');
+    var xsInp = document.getElementById('resp-input-xs');
+    var smInp = document.getElementById('resp-input-sm');
+    var mdInp = document.getElementById('resp-input-md');
+    var lgInp = document.getElementById('resp-input-lg');
+    var allInp = document.getElementById('resp-input-all');
+    var allCols = [xsInp, smInp, mdInp, lgInp, allInp];
+
+    function clear(){
+      for(var i = 0; i<allCols.length; i++){
+        allCols[i].value = '';
+      }
+    }
+
+    clearCols.addEventListener('click', clear);
+  }
+
   // CLEAR CODE
   function clearCode(){
     var code = $('#code');
@@ -139,4 +158,6 @@ $(document).ready(function() {
   divCloseCreate();
   clearCode();
   colFix();
+  colClear();
+
 });
